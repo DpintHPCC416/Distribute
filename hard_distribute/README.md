@@ -11,4 +11,4 @@ Code of distribute sketch experiment code on tofino switch, including control pl
 
 3.set swtich ports  
 
-4.run util.controller.py with python3
+4.run util.controller.py with python3，also need to modify this code according to your topology and control strategy
