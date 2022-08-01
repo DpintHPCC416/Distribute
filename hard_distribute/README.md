@@ -1,7 +1,7 @@
 ### Introduction
 Code of distribute sketch experiment code on tofino switch, including control plane code and flow table distribution.
 ### Contents
-`distribute.p4`:P4-16 code of data plane  
+`distribute.p4`:P4-16 code of control plane  
 `common`:headers and utils used in this experiment  
 `util`:controller for distributing flow table
 ### How to use
