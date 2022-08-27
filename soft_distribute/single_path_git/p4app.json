@@ -1,0 +1,68 @@
+{
+    "topo_module": {
+        "module_name": "p4utils.mininetlib.apptopo", 
+        "object_name": "AppTopoStrategies", 
+        "file_path": ""
+    }, 
+    "cli": true, 
+    "topology": {
+        "switches": {
+            "s2": {
+                "cli_input": "rules/s2-commands.txt"
+            }, 
+            "s1": {
+                "cli_input": "rules/s1-commands.txt"
+            }, 
+            "s0": {
+                "cli_input": "rules/s0-commands.txt"
+            }
+        }, 
+        "assignment_strategy": "l2", 
+        "hosts": {
+            "h2": {}, 
+            "h0": {}, 
+            "h1": {}
+        }, 
+        "auto_arp_tables": true, 
+        "links": [
+            [
+                "s2", 
+                "h2"
+            ], 
+            [
+                "s1", 
+                "h1"
+            ], 
+            [
+                "s0", 
+                "h0"
+            ], 
+            [
+                "s0", 
+                "s1"
+            ], 
+            [
+                "s1", 
+                "s2"
+            ]
+        ]
+    }, 
+    "switch": "simple_switch", 
+    "program": "p4src/single.p4", 
+    "pcap_dump": true, 
+    "switch_cli": "simple_switch_CLI", 
+    "topodb_module": {
+        "module_name": "p4utils.utils.topology", 
+        "object_name": "Topology", 
+        "file_path": ""
+    }, 
+    "mininet_module": {
+        "module_name": "p4utils.mininetlib.p4net", 
+        "object_name": "P4Mininet", 
+        "file_path": ""
+    }, 
+    "enable_log": true, 
+    "options": "--target bmv2 --arch v1model --std p4-16", 
+    "controller_module": null, 
+    "compiler": "p4c"
+}

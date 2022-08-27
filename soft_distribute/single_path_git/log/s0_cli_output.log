@@ -1,0 +1,29 @@
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: RuntimeCmd: RuntimeCmd: RuntimeCmd: Adding entry to exact match table tbl_forward
+match key:           EXACT-0a:00:00:00	EXACT-0a:00:00:00
+action:              forward
+runtime data:        00:01
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to exact match table tbl_forward
+match key:           EXACT-0a:00:00:00	EXACT-0a:00:00:01
+action:              forward
+runtime data:        00:02
+Entry has been added with handle 1
+RuntimeCmd: Adding entry to exact match table tbl_forward
+match key:           EXACT-0a:00:00:00	EXACT-0a:00:00:02
+action:              forward
+runtime data:        00:02
+Entry has been added with handle 2
+RuntimeCmd: Adding entry to range match table update_SSC1
+match key:           EXACT-0a:00:00:00	EXACT-0a:00:00:02	RANGE-00:00:00:00 -> 00:00:3f:ff
+action:              hit_bucket1
+runtime data:        00:00:00:00	00:00:00:01	04
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to range match table update_SSC2
+match key:           EXACT-0a:00:00:00	EXACT-0a:00:00:02	RANGE-00:00:00:00 -> 00:00:3f:ff
+action:              hit_bucket2
+runtime data:        00:00:00:00	00:00:00:01	04
+Entry has been added with handle 0
+RuntimeCmd: 

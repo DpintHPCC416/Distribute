@@ -1,0 +1,13 @@
+table_clear update_SSC1
+table_clear update_SSC2
+table_clear tbl_forward
+
+
+table_add tbl_forward forward 10.0.0.0 10.0.0.0 => 2 
+table_add tbl_forward forward 10.0.0.0 10.0.0.1 => 2 
+table_add tbl_forward forward 10.0.0.0 10.0.0.2 => 1 
+
+
+table_add update_SSC1 hit_bucket1 10.0.0.0 10.0.0.2 49152->65535 => 49152 1 4 0
+table_add update_SSC2 hit_bucket2 10.0.0.0 10.0.0.2 49152->65535 => 49152 1 4 0
+
