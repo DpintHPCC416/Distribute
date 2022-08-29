@@ -1,4 +1,0 @@
-root      30636  0.3  0.4 269432 20068 pts/55   Sl+  19:08   0:00 python test/recv.py 60
-root      30639  0.0  0.4 121696 16844 pts/55   Sl+  19:08   0:00 python test/recv.py 60
-root      30643  0.0  0.4  48236 17128 pts/55   S+   19:08   0:00 python test/recv.py 60
-root      30672  0.0  0.0  14224   940 pts/58   S+   19:08   0:00 grep --color=auto python test/recv.py
