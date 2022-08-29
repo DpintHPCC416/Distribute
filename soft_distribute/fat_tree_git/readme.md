@@ -1,1 +1,1 @@
-### How to ues
+### How to use
