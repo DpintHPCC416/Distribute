@@ -1,5 +1,5 @@
 ### About this program
-The code of the experiment on fat tree, including a simple demo about entries in one single path.
+The code of experiment on fat tree, including a simple demo about entries in one of the paths.
 ### How to use
 #### 1. Modify src/topo.py (line 330), add your own table entries.(There is a example from h0 to h2)
 
