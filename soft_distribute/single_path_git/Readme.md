@@ -1,9 +1,7 @@
+### About this program
+The code of the experiment on fat tree, including a simple demo about entries with three switches.
 ### How to use
-#### step 1
-创建拓扑
-#### step 2
-编写表项
-#### step 3
-p4run 运行
-#### step 4
-utils文件夹下测试
+#### 1. Create topo files. `python topo_allocator.py num` num:switch num to create
+#### 2. Create entries : Edit files in folder rules or Edit  
+#### 3. `sudo p4run --config p4app.json` to execute this demo.
+#### 4. `./utils/test` to test
