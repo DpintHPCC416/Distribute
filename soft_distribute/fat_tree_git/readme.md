@@ -1,12 +1,14 @@
 ### About this program
 The code of the experiment on fat tree, including a simple demo about entries in one single path.
 ### How to use
-#### 1. Modify Src / TOPO Py (about line 330), add your own table entries.
+#### 1. Modify src/topo.py (line 330), add your own table entries.(There is a example from h0 to h2)
 
-#### 2. Run Python topo.py to generate the config file in the topo folder
+#### 2. Run `python3 topo.py` to generate the config file in the topo folder
 
 #### 3. Run the `make run` running program in the root directory.
 
-#### 4. View and operate in mininet terminal.
+#### 4. View and operate in mininet terminal.(like `xterm h0`)
 
 #### 5. There are simple test files in the test folder. After modifying the IP address and port number, compile and run them.
+
+#### 6. Write code to control contracting and obtain results.
