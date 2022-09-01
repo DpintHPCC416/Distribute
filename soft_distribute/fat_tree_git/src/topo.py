@@ -134,7 +134,7 @@ class Switch(Node):
                             if entry2['table'] == 'MyIngress.tbl_check_inport':
                                 if int(entry2['match']['standard_metadata.ingress_port']) == ingress_port:
                                     return int(entry2['action_params']['port'])
-
+ 
 class Host(Node):
     def __init__(self, index):
         Node.__init__(self)
