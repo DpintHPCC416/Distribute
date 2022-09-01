@@ -1,4 +1,4 @@
 ### single_path_git
-Program in case of single path
+Program in case of single path.
 ### fat_tree_git
-Program in case of fat-tree topo 
+Program in case of fat-tree topo.
