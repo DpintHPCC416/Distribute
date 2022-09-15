@@ -7,8 +7,8 @@ Code of distribute sketch experiment code on tofino switch, including control pl
 ### How to use
 1.install and configure the required environment(SDE and path)  
 
-2.compilation and installation distribute.py in tofino switch(version 9.7.2)  
+2.compilation and installation distribute.p4 in tofino switch(version 9.7.2)  
 
 3.set swtich ports  
 
-4.run util.controller.py with python3，also need to modify this code according to your topology and control strategy
+4.run util/controller.py with python3，also need to modify this code according to your topology and control strategy
