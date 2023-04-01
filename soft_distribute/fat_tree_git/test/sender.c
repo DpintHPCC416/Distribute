@@ -29,7 +29,7 @@ void construct_ip(struct ipv4_hdr *ip_header)
     ip_header->src_addr = inet_addr(src_ip);
     ip_header->dst_addr = inet_addr(dest_ip);
     ip_header->fragment_offset = 0;
-    ip_header->hdr_checksum = 0; //可能要设置？
+    ip_header->hdr_checksum = 0; 
 }
 
 
