@@ -1,0 +1,404 @@
+{
+    "switches": {
+        "s19": {
+            "runtime_json": "topo/s19-runtime.json"
+        },
+        "s9": {
+            "runtime_json": "topo/s9-runtime.json"
+        },
+        "s1": {
+            "runtime_json": "topo/s1-runtime.json"
+        },
+        "s4": {
+            "runtime_json": "topo/s4-runtime.json"
+        },
+        "s12": {
+            "runtime_json": "topo/s12-runtime.json"
+        },
+        "s2": {
+            "runtime_json": "topo/s2-runtime.json"
+        },
+        "s0": {
+            "runtime_json": "topo/s0-runtime.json"
+        },
+        "s15": {
+            "runtime_json": "topo/s15-runtime.json"
+        },
+        "s8": {
+            "runtime_json": "topo/s8-runtime.json"
+        },
+        "s13": {
+            "runtime_json": "topo/s13-runtime.json"
+        },
+        "s5": {
+            "runtime_json": "topo/s5-runtime.json"
+        },
+        "s10": {
+            "runtime_json": "topo/s10-runtime.json"
+        },
+        "s7": {
+            "runtime_json": "topo/s7-runtime.json"
+        },
+        "s11": {
+            "runtime_json": "topo/s11-runtime.json"
+        },
+        "s18": {
+            "runtime_json": "topo/s18-runtime.json"
+        },
+        "s16": {
+            "runtime_json": "topo/s16-runtime.json"
+        },
+        "s3": {
+            "runtime_json": "topo/s3-runtime.json"
+        },
+        "s14": {
+            "runtime_json": "topo/s14-runtime.json"
+        },
+        "s17": {
+            "runtime_json": "topo/s17-runtime.json"
+        },
+        "s6": {
+            "runtime_json": "topo/s6-runtime.json"
+        }
+    },
+    "links": [
+        [
+            "h0",
+            "s0-p0"
+        ],
+        [
+            "h1",
+            "s0-p1"
+        ],
+        [
+            "h2",
+            "s1-p0"
+        ],
+        [
+            "h3",
+            "s1-p1"
+        ],
+        [
+            "h4",
+            "s4-p0"
+        ],
+        [
+            "h5",
+            "s4-p1"
+        ],
+        [
+            "h6",
+            "s5-p0"
+        ],
+        [
+            "h7",
+            "s5-p1"
+        ],
+        [
+            "h8",
+            "s8-p0"
+        ],
+        [
+            "h9",
+            "s8-p1"
+        ],
+        [
+            "h10",
+            "s9-p0"
+        ],
+        [
+            "h11",
+            "s9-p1"
+        ],
+        [
+            "h12",
+            "s12-p0"
+        ],
+        [
+            "h13",
+            "s12-p1"
+        ],
+        [
+            "h14",
+            "s13-p0"
+        ],
+        [
+            "h15",
+            "s13-p1"
+        ],
+        [
+            "s0-p2",
+            "s2-p0"
+        ],
+        [
+            "s0-p3",
+            "s3-p0"
+        ],
+        [
+            "s1-p2",
+            "s2-p1"
+        ],
+        [
+            "s1-p3",
+            "s3-p1"
+        ],
+        [
+            "s4-p2",
+            "s6-p0"
+        ],
+        [
+            "s4-p3",
+            "s7-p0"
+        ],
+        [
+            "s5-p2",
+            "s6-p1"
+        ],
+        [
+            "s5-p3",
+            "s7-p1"
+        ],
+        [
+            "s8-p2",
+            "s10-p0"
+        ],
+        [
+            "s8-p3",
+            "s11-p0"
+        ],
+        [
+            "s9-p2",
+            "s10-p1"
+        ],
+        [
+            "s9-p3",
+            "s11-p1"
+        ],
+        [
+            "s12-p2",
+            "s14-p0"
+        ],
+        [
+            "s12-p3",
+            "s15-p0"
+        ],
+        [
+            "s13-p2",
+            "s14-p1"
+        ],
+        [
+            "s13-p3",
+            "s15-p1"
+        ],
+        [
+            "s2-p2",
+            "s16-p0"
+        ],
+        [
+            "s2-p3",
+            "s17-p0"
+        ],
+        [
+            "s3-p2",
+            "s18-p0"
+        ],
+        [
+            "s3-p3",
+            "s19-p0"
+        ],
+        [
+            "s6-p2",
+            "s16-p1"
+        ],
+        [
+            "s6-p3",
+            "s17-p1"
+        ],
+        [
+            "s7-p2",
+            "s18-p1"
+        ],
+        [
+            "s7-p3",
+            "s19-p1"
+        ],
+        [
+            "s10-p2",
+            "s16-p2"
+        ],
+        [
+            "s10-p3",
+            "s17-p2"
+        ],
+        [
+            "s11-p2",
+            "s18-p2"
+        ],
+        [
+            "s11-p3",
+            "s19-p2"
+        ],
+        [
+            "s14-p2",
+            "s16-p3"
+        ],
+        [
+            "s14-p3",
+            "s17-p3"
+        ],
+        [
+            "s15-p2",
+            "s18-p3"
+        ],
+        [
+            "s15-p3",
+            "s19-p3"
+        ]
+    ],
+    "hosts": {
+        "h2": {
+            "mac": "08:00:10:00:01:02",
+            "ip": "10.0.1.2/24",
+            "commands": [
+                "route add default gw 10.0.1.10 dev eth0",
+                "arp -i eth0 -s 10.0.1.10 08:00:10:00:01:10",
+                "arp -i eth0 -s 10.0.1.3 08:00:10:00:01:03"
+            ]
+        },
+        "h4": {
+            "mac": "08:00:10:01:00:02",
+            "ip": "10.1.0.2/24",
+            "commands": [
+                "route add default gw 10.1.0.10 dev eth0",
+                "arp -i eth0 -s 10.1.0.10 08:00:10:01:00:10",
+                "arp -i eth0 -s 10.1.0.3 08:00:10:01:00:03"
+            ]
+        },
+        "h7": {
+            "mac": "08:00:10:01:01:03",
+            "ip": "10.1.1.3/24",
+            "commands": [
+                "route add default gw 10.1.1.11 dev eth0",
+                "arp -i eth0 -s 10.1.1.11 08:00:10:01:01:11",
+                "arp -i eth0 -s 10.1.1.2 08:00:10:01:01:02"
+            ]
+        },
+        "h13": {
+            "mac": "08:00:10:03:00:03",
+            "ip": "10.3.0.3/24",
+            "commands": [
+                "route add default gw 10.3.0.11 dev eth0",
+                "arp -i eth0 -s 10.3.0.11 08:00:10:03:00:11",
+                "arp -i eth0 -s 10.3.0.2 08:00:10:03:00:02"
+            ]
+        },
+        "h0": {
+            "mac": "08:00:10:00:00:02",
+            "ip": "10.0.0.2/24",
+            "commands": [
+                "route add default gw 10.0.0.10 dev eth0",
+                "arp -i eth0 -s 10.0.0.10 08:00:10:00:00:10",
+                "arp -i eth0 -s 10.0.0.3 08:00:10:00:00:03"
+            ]
+        },
+        "h12": {
+            "mac": "08:00:10:03:00:02",
+            "ip": "10.3.0.2/24",
+            "commands": [
+                "route add default gw 10.3.0.10 dev eth0",
+                "arp -i eth0 -s 10.3.0.10 08:00:10:03:00:10",
+                "arp -i eth0 -s 10.3.0.3 08:00:10:03:00:03"
+            ]
+        },
+        "h3": {
+            "mac": "08:00:10:00:01:03",
+            "ip": "10.0.1.3/24",
+            "commands": [
+                "route add default gw 10.0.1.11 dev eth0",
+                "arp -i eth0 -s 10.0.1.11 08:00:10:00:01:11",
+                "arp -i eth0 -s 10.0.1.2 08:00:10:00:01:02"
+            ]
+        },
+        "h6": {
+            "mac": "08:00:10:01:01:02",
+            "ip": "10.1.1.2/24",
+            "commands": [
+                "route add default gw 10.1.1.10 dev eth0",
+                "arp -i eth0 -s 10.1.1.10 08:00:10:01:01:10",
+                "arp -i eth0 -s 10.1.1.3 08:00:10:01:01:03"
+            ]
+        },
+        "h9": {
+            "mac": "08:00:10:02:00:03",
+            "ip": "10.2.0.3/24",
+            "commands": [
+                "route add default gw 10.2.0.11 dev eth0",
+                "arp -i eth0 -s 10.2.0.11 08:00:10:02:00:11",
+                "arp -i eth0 -s 10.2.0.2 08:00:10:02:00:02"
+            ]
+        },
+        "h11": {
+            "mac": "08:00:10:02:01:03",
+            "ip": "10.2.1.3/24",
+            "commands": [
+                "route add default gw 10.2.1.11 dev eth0",
+                "arp -i eth0 -s 10.2.1.11 08:00:10:02:01:11",
+                "arp -i eth0 -s 10.2.1.2 08:00:10:02:01:02"
+            ]
+        },
+        "h8": {
+            "mac": "08:00:10:02:00:02",
+            "ip": "10.2.0.2/24",
+            "commands": [
+                "route add default gw 10.2.0.10 dev eth0",
+                "arp -i eth0 -s 10.2.0.10 08:00:10:02:00:10",
+                "arp -i eth0 -s 10.2.0.3 08:00:10:02:00:03"
+            ]
+        },
+        "h14": {
+            "mac": "08:00:10:03:01:02",
+            "ip": "10.3.1.2/24",
+            "commands": [
+                "route add default gw 10.3.1.10 dev eth0",
+                "arp -i eth0 -s 10.3.1.10 08:00:10:03:01:10",
+                "arp -i eth0 -s 10.3.1.3 08:00:10:03:01:03"
+            ]
+        },
+        "h10": {
+            "mac": "08:00:10:02:01:02",
+            "ip": "10.2.1.2/24",
+            "commands": [
+                "route add default gw 10.2.1.10 dev eth0",
+                "arp -i eth0 -s 10.2.1.10 08:00:10:02:01:10",
+                "arp -i eth0 -s 10.2.1.3 08:00:10:02:01:03"
+            ]
+        },
+        "h5": {
+            "mac": "08:00:10:01:00:03",
+            "ip": "10.1.0.3/24",
+            "commands": [
+                "route add default gw 10.1.0.11 dev eth0",
+                "arp -i eth0 -s 10.1.0.11 08:00:10:01:00:11",
+                "arp -i eth0 -s 10.1.0.2 08:00:10:01:00:02"
+            ]
+        },
+        "h15": {
+            "mac": "08:00:10:03:01:03",
+            "ip": "10.3.1.3/24",
+            "commands": [
+                "route add default gw 10.3.1.11 dev eth0",
+                "arp -i eth0 -s 10.3.1.11 08:00:10:03:01:11",
+                "arp -i eth0 -s 10.3.1.2 08:00:10:03:01:02"
+            ]
+        },
+        "h1": {
+            "mac": "08:00:10:00:00:03",
+            "ip": "10.0.0.3/24",
+            "commands": [
+                "route add default gw 10.0.0.11 dev eth0",
+                "arp -i eth0 -s 10.0.0.11 08:00:10:00:00:11",
+                "arp -i eth0 -s 10.0.0.2 08:00:10:00:00:02"
+            ]
+        }
+    }
+}
