@@ -9,7 +9,7 @@
 #include "common/util.p4"
 
 #define FLOW_ID_UPBOUND 65535
-#define LOGICAL_INDEX 16
+//means sketch_w is 2^(10-1)
 #define SWITCH_SIZE 10
 
 struct metadata_t { 
@@ -132,7 +132,7 @@ control SwitchIngress(
 // range match
 // ---------------------------------------------------------------------------
 
-    Register<bit<32>, bit<SWITCH_SIZE>>(size=2<<(SWITCH_SIZE)) register_table1;
+    Register<bit<32>, bit<SWITCH_SIZE>>(size=1<<(SWITCH_SIZE)) register_table1;
     RegisterAction<bit<32>,bit<SWITCH_SIZE>,bit<32>>(register_table1) register_table1_action = {
         void apply(inout bit<32> value , out bit<32> result){
             value = value + 1;
@@ -165,7 +165,7 @@ control SwitchIngress(
     }
 
 
-    Register<bit<32>, bit<SWITCH_SIZE>>(size=2<<(SWITCH_SIZE)) register_table2;
+    Register<bit<32>, bit<SWITCH_SIZE>>(size=1<<(SWITCH_SIZE)) register_table2;
     RegisterAction<bit<32>,bit<SWITCH_SIZE>,bit<32>>(register_table2) register_table2_action = {
         void apply(inout bit<32> value , out bit<32> result){
             value = value + 1;
@@ -180,8 +180,6 @@ control SwitchIngress(
         // register
         // ---------------------------------------------------------------------------
         hdr.udp.result[31:0] = register_table2_action.execute(distribute_meta.index2[15:6]);
-        
-
 
     }
     action miss_range2(){
@@ -258,8 +256,6 @@ control SwitchIngress(
 
 
 }
-
-
 
 
 // ---------------------------------------------------------------------------
