@@ -122,7 +122,6 @@ header vxlan_h {
     bit<8> reserved2;
 }
 
-// Generic Routing Encapsulation (GRE) -- RFC 1701
 header gre_h {
     bit<1> C;
     bit<1> R;
@@ -143,11 +142,9 @@ struct header_t {
     tcp_h tcp;
     udp_h udp;
 
-    // Add more headers here.
 }
 
 struct empty_header_t {}
-
 struct empty_metadata_t {}
 
 #endif /* _HEADERS_ */
