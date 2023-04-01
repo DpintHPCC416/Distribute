@@ -15,7 +15,6 @@ header ethernet_h
     bit<16> etherType;
 }
 
-
 header ipv4_h
 {
     bit<4> version;
@@ -48,7 +47,6 @@ struct headers
     udp_h udp;
 }
  
-
 struct distribute_metadata_t{
     bit<32> out_port;
     bit<48> approximation;
@@ -102,16 +100,11 @@ control MyVerifyChecksum(inout headers hdr, inout distribute_metadata_t distribu
     apply {  }
 }
 
-
-
 control MyIngress(inout headers hdr, inout distribute_metadata_t distribute_meta, inout standard_metadata_t standard_metadata)
-{
-    
-    
+{     
     action drop() {
         mark_to_drop(standard_metadata);
-    }
-    
+    }    
     action forward(bit<48> dstAddr ,bit<9> port)
     {
         hdr.ipv4.ecn = 1;
@@ -140,9 +133,6 @@ control MyIngress(inout headers hdr, inout distribute_metadata_t distribute_meta
         tbl_forward.apply();
     }
 }
-
-
-
 
 control MyComputeChecksum(inout headers  hdr, inout distribute_metadata_t distribute_meta) {
      apply {
@@ -174,8 +164,6 @@ control MyDeparser(packet_out pkt, in headers hdr)
     }
     
 }
-
-
 
 control MyEgress(inout headers hdr, inout distribute_metadata_t distribute_meta, inout standard_metadata_t standard_metadata)
 {
@@ -242,11 +230,8 @@ control MyEgress(inout headers hdr, inout distribute_metadata_t distribute_meta,
     }
 
 
-
-
     register <bit<32>> (65535) register_bucket1;
     register <bit<32>> (65535) register_bucket2;
-
 
     // register <bit<48>> (65535) global_timestamp_reg;     //last global timestamp  //because every flow need to update a timestamp when each packet arrives
     // register <bit<32>> (65535) flow_packet_number;     //packet number of a flow
