@@ -1,6 +1,6 @@
 receiver_interface=eth0 
 max_bit_range=255
-global_hash_range=100000
+global_hash_range=300000
 receiver_ip=10.1.0.2
 sender_ip=10.0.0.2
 common_log=common_log
